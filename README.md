@@ -2,11 +2,6 @@
 
 Lightwork is a tool powered by OpenAI LLMs designed to trivialise the process of conducting productive study sessions. 
 
-**Table of Contents:**
-
-- [Goals](#goals)
-- 
-
 ## Goals
 
 Lightwork aims to:
@@ -19,17 +14,18 @@ Lightwork aims to:
 
 Lightwork resources are exposed via a FastAPI Web API server, which can be ran by executing:
 
-```
+```bash
 uvicorn main:app --port 7001
 ```
 
 **Using Docker -** You can alternatively build a docker image and run the app in a container:
 
-```
+```bash
+# Build the image
 docker build -t openyan-lightwork:latest .
-```
 
-```
+# Serve the container
 docker run -p 7001:7001 -d --name openyan-lightwork openyan-lightwork:latest
 ```
 
+API v1 should be accessible at `localhost:7001/v1`

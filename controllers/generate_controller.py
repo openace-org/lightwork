@@ -3,7 +3,7 @@ Endpoints for making API calls to OpenAI
 """
 
 from fastapi import APIRouter
-from utils.types import JsonResponse
+from lib.types import JsonResponse
 
 router = APIRouter()
 
@@ -19,3 +19,5 @@ async def health_check() -> JsonResponse:
             "some_col": 1,
         }
     )
+
+
